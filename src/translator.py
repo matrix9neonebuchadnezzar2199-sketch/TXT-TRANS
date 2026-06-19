@@ -9,11 +9,28 @@ from pathlib import Path
 
 import ctranslate2
 from transformers import AutoTokenizer
+from transformers.utils import logging as hf_logging
 
 from chunker import chunk_text, join_chunks
 from languages import language_by_suffix
 
 logger = logging.getLogger(__name__)
+
+
+def _load_tokenizer(model_dir: Path) -> AutoTokenizer:
+    """Load NLLB tokenizer from the bundled model directory.
+
+    Note:
+        Transformers may warn to set ``fix_mistral_regex=True``, but that flag
+        breaks CJK tokenization on ``NllbTokenizer`` (verified: zh/ko/ja become
+        ``<unk>``). Suppress the misleading warning during load.
+    """
+    previous_verbosity = hf_logging.get_verbosity()
+    hf_logging.set_verbosity_error()
+    try:
+        return AutoTokenizer.from_pretrained(str(model_dir))
+    finally:
+        hf_logging.set_verbosity(previous_verbosity)
 
 
 class NllbTranslator:
@@ -40,12 +57,32 @@ class NllbTranslator:
         self._tokenizer: AutoTokenizer | None = None
         self._load_lock = threading.Lock()
 
-    def _ensure_loaded(self) -> None:
+    def load(self, cancel_event: threading.Event | None = None) -> None:
+        """Eagerly load model weights and tokenizer (startup path).
+
+        Args:
+            cancel_event: When set between stages, abort with ``RuntimeError``.
+
+        Raises:
+            FileNotFoundError: Model directory missing.
+            RuntimeError: Load cancelled via ``cancel_event``.
+        """
+        self._ensure_loaded(cancel_event=cancel_event)
+
+    def unload(self) -> None:
+        """Release loaded weights so the next load starts fresh."""
+        with self._load_lock:
+            self._translator = None
+            self._tokenizer = None
+
+    def _ensure_loaded(self, cancel_event: threading.Event | None = None) -> None:
         if self._translator is not None:
             return
         with self._load_lock:
             if self._translator is not None:
                 return
+            if cancel_event is not None and cancel_event.is_set():
+                raise RuntimeError("Load cancelled")
             if not self.model_dir.is_dir():
                 raise FileNotFoundError(
                     f"Model directory not found: {self.model_dir}. "
@@ -57,7 +94,10 @@ class NllbTranslator:
                 device=self.device,
                 compute_type=self.compute_type,
             )
-            self._tokenizer = AutoTokenizer.from_pretrained(str(self.model_dir))
+            if cancel_event is not None and cancel_event.is_set():
+                self._translator = None
+                raise RuntimeError("Load cancelled")
+            self._tokenizer = _load_tokenizer(self.model_dir)
 
     def translate(self, text: str, src_suffix: str, tgt_suffix: str) -> str:
         """Translate a single text block.
@@ -110,10 +150,7 @@ class NllbTranslator:
         translator = self._translator
 
         tokenizer.src_lang = src_lang.nllb_code
-        if hasattr(tokenizer, "lang_code_to_token"):
-            target_prefix = [tokenizer.lang_code_to_token[tgt_lang.nllb_code]]
-        else:
-            target_prefix = [tgt_lang.nllb_code]
+        target_prefix = [tgt_lang.nllb_code]
 
         results: list[str] = []
         total = len(chunks)
@@ -131,7 +168,9 @@ class NllbTranslator:
                 max_decoding_length=512,
             )
             hypothesis = batch_result[0].hypotheses[0]
-            output_ids = tokenizer.convert_tokens_to_ids(hypothesis)
+            # First token is the target language code; skip per CTranslate2 NLLB docs.
+            output_tokens = hypothesis[1:] if len(hypothesis) > 1 else hypothesis
+            output_ids = tokenizer.convert_tokens_to_ids(output_tokens)
             results.append(tokenizer.decode(output_ids, skip_special_tokens=True))
 
             if on_progress is not None:

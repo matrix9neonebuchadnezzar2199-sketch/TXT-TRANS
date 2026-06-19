@@ -5,6 +5,8 @@
 /.build/
 /gui/userconf.yaml
 tests/sample_ja.*.txt
+tests/sample_zh.*.txt
+tests/debug*.txt
 *.pyc
 *.pyo
 .DS_Store

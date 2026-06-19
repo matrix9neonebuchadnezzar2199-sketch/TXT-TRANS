@@ -8,10 +8,10 @@ Offline desktop translator for `.txt` files. Engine: **NLLB-200-distilled-600M**
 
 | Layer | Path | Role |
 |-------|------|------|
-| GUI | `gui/main.py` | Flet UI, file pickers, background worker |
+| GUI | `gui/main.py` | Flet UI, paste workflow, stop/reload, help dialog |
 | CLI | `src/translate.py` | Batch / automation |
 | Chunker | `src/chunker.py` | Paragraph and sentence splitting (~400 chars) |
-| Translator | `src/translator.py` | Lazy-loaded CTranslate2 + Hugging Face tokenizer |
+| Translator | `src/translator.py` | CTranslate2 + Hugging Face tokenizer (`load`/`unload`, cancellable) |
 | Languages | `src/languages.py` | UI labels and NLLB FLORES codes |
 | Paths | `src/path_helpers.py` | `report.txt` → `report.en.txt` |
 
@@ -21,7 +21,7 @@ Offline desktop translator for `.txt` files. Engine: **NLLB-200-distilled-600M**
 input.txt → chunk_text → translate_chunks (NLLB) → join_chunks → report.en.txt
 ```
 
-GUI runs translation on a **background thread** and updates the UI via `page.run_task` (no UI-thread blocking).
+GUI runs model load and translation on a **background thread** and updates the UI via `page.run_task` (Flet 0.27 requires async callbacks). Startup eagerly loads the model; **Stop** sets a cancel event, unloads weights, and the next translate reloads. Status line shows stop acknowledgement and chunk progress (`done/total`).
 
 ## Model
 
