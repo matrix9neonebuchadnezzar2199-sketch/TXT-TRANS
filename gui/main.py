@@ -322,7 +322,6 @@ def main(page: ft.Page) -> None:
         width=300,
         disabled=True,
         enable_filter=True,
-        filter_on_change=True,
         **dropdown_style,
     )
     target_dd = ft.Dropdown(
@@ -332,7 +331,6 @@ def main(page: ft.Page) -> None:
         width=300,
         disabled=True,
         enable_filter=True,
-        filter_on_change=True,
         **dropdown_style,
     )
 
