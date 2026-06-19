@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "txt-trans"
+version = "0.1.0"
+description = "Offline CPU text translator (JA / EN / ZH / KO / RU)"
+readme = "README.md"
+requires-python = ">=3.12"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[project.scripts]
+txt-trans = "translate:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["translate", "translator", "chunker", "languages", "path_helpers"]
