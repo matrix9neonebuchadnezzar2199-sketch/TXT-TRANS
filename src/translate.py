@@ -7,7 +7,7 @@ import logging
 import sys
 from pathlib import Path
 
-from languages import LANGUAGES
+from languages import LANGUAGES, resolve_language
 from path_helpers import default_model_dir, list_input_txt_files, output_path_for
 from translator import NllbTranslator
 
@@ -15,15 +15,25 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def _build_parser() -> argparse.ArgumentParser:
-    suffix_help = ", ".join(lang.suffix for lang in LANGUAGES)
+    suffix_help = ", ".join(lang.suffix for lang in LANGUAGES[:6]) + ", … (202 NLLB codes)"
     parser = argparse.ArgumentParser(
         description="Offline text translator (NLLB-200 + CTranslate2)",
     )
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--input", type=Path, help="Single .txt file")
     group.add_argument("--input-dir", type=Path, help="Directory of .txt files")
-    parser.add_argument("--from", dest="src", required=True, help=f"Source: {suffix_help}")
-    parser.add_argument("--to", dest="tgt", required=True, help=f"Target: {suffix_help}")
+    parser.add_argument(
+        "--from",
+        dest="src",
+        required=True,
+        help=f"Source language ({suffix_help}, e.g. en or eng_Latn)",
+    )
+    parser.add_argument(
+        "--to",
+        dest="tgt",
+        required=True,
+        help=f"Target language ({suffix_help}, e.g. ja or jpn_Jpan)",
+    )
     parser.add_argument("--force", action="store_true", help="Overwrite existing outputs")
     parser.add_argument(
         "--model-dir",
@@ -71,6 +81,12 @@ def main(argv: list[str] | None = None) -> int:
     if args.src == args.tgt:
         parser.error("Source and target language must differ")
 
+    try:
+        src_lang = resolve_language(args.src)
+        tgt_lang = resolve_language(args.tgt)
+    except KeyError as exc:
+        parser.error(str(exc))
+
     model_dir = args.model_dir or default_model_dir(REPO_ROOT)
     translator = NllbTranslator(model_dir)
 
@@ -91,8 +107,8 @@ def main(argv: list[str] | None = None) -> int:
             output_path = _translate_file(
                 translator,
                 input_path,
-                args.src,
-                args.tgt,
+                src_lang.suffix,
+                tgt_lang.suffix,
                 force=args.force,
             )
             logging.info("%s -> %s", input_path, output_path)

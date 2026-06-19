@@ -23,6 +23,12 @@ if os.path.isdir(MODEL_DIR):
 else:
     print(f"[WARN] Model dir missing: {MODEL_DIR!r}; run scripts/setup_model.ps1")
 
+_lang_catalog = os.path.join(SRC_DIR, "nllb_languages.json")
+if os.path.isfile(_lang_catalog):
+    datas.append((_lang_catalog, SRC_DIR))
+else:
+    print(f"[WARN] Language catalog missing: {_lang_catalog!r}")
+
 _gui_assets = os.path.join(GUI_DIR, "assets")
 if os.path.isdir(_gui_assets):
     datas.append((_gui_assets, "assets"))

@@ -36,7 +36,13 @@ import flet as ft
 import yaml
 
 from chunker import chunk_text, join_chunks
-from languages import dropdown_options
+from languages import (
+    build_flet_dropdown_options,
+    default_source_code,
+    default_target_code,
+    language_by_code,
+    normalize_config_code,
+)
 from path_helpers import default_model_dir
 from translator import NllbTranslator
 
@@ -57,6 +63,7 @@ UI_STRINGS = {
         "load_cancelled": "モデル読み込みを停止しました",
         "no_input": "原文にテキストを入力してください",
         "same_lang": "原文と訳文の言語が同じです",
+        "pick_lang": "言語を選択してください",
         "error": "エラー: {msg}",
         "wait_model": "モデルのロード完了をお待ちください",
         "lang_section": "言語設定",
@@ -75,7 +82,7 @@ UI_STRINGS = {
             "Meta NLLB-200-distilled-600M（No Language Left Behind）を\n"
             "CTranslate2（int8 量子化）で CPU 実行しています。\n\n"
             "・完全オフライン（インターネット不要）\n"
-            "・対応言語: 日・英・中（簡体/繁体）・韓・露\n"
+            "・対応言語: NLLB-200（202言語、日英中韓露は上部に固定表示）\n"
             "・段落単位で翻訳（長文は自動分割）\n"
             "・専門用語は文脈によって誤訳する場合があります\n\n"
             "【使い方】\n"
@@ -103,6 +110,7 @@ UI_STRINGS = {
         "load_cancelled": "Model loading stopped",
         "no_input": "Paste source text first",
         "same_lang": "Source and target language are the same",
+        "pick_lang": "Select a language",
         "error": "Error: {msg}",
         "wait_model": "Wait for model loading to finish",
         "lang_section": "Languages",
@@ -121,7 +129,7 @@ UI_STRINGS = {
             "Runs Meta NLLB-200-distilled-600M (No Language Left Behind)\n"
             "via CTranslate2 (int8) on CPU.\n\n"
             "・Fully offline\n"
-            "・Languages: JA / EN / ZH (Hans/Hant) / KO / RU\n"
+            "・Languages: NLLB-200 (202; JA/EN/ZH/KO/RU pinned at top)\n"
             "・Paragraph-based chunking for long text\n\n"
             "【How to use】\n"
             "1. Paste text into the blue INPUT box\n"
@@ -173,13 +181,26 @@ def userconf_path() -> Path:
 def load_config() -> dict:
     """Load or create default user configuration."""
     path = userconf_path()
-    defaults = {"langcode": "ja", "source_lang": "ja", "target_lang": "en"}
+    defaults = {
+        "langcode": "ja",
+        "source_lang": default_source_code(),
+        "target_lang": default_target_code(),
+    }
     if not path.is_file():
         return defaults
     try:
         with path.open(encoding="utf-8") as handle:
             data = yaml.safe_load(handle) or {}
-        return {**defaults, **data}
+        merged = {**defaults, **data}
+        merged["source_lang"] = normalize_config_code(
+            str(merged.get("source_lang", defaults["source_lang"])),
+            fallback=defaults["source_lang"],
+        )
+        merged["target_lang"] = normalize_config_code(
+            str(merged.get("target_lang", defaults["target_lang"])),
+            fallback=defaults["target_lang"],
+        )
+        return merged
     except (OSError, yaml.YAMLError):
         return defaults
 
@@ -268,7 +289,7 @@ def main(page: ft.Page) -> None:
     )
     stop_btn = ft.OutlinedButton(L("stop"), style=ft.ButtonStyle(color=UI["muted"]))
 
-    lang_options = dropdown_options(langcode)
+    lang_options = build_flet_dropdown_options(langcode)
     dropdown_style = dict(
         bgcolor=UI["select_bg"],
         border_color=UI["select_border"],
@@ -280,18 +301,22 @@ def main(page: ft.Page) -> None:
     )
     source_dd = ft.Dropdown(
         label=L("source"),
-        options=[ft.dropdown.Option(key=s, text=label) for s, label in lang_options],
-        value=config.get("source_lang", "ja"),
-        width=220,
+        options=lang_options,
+        value=config.get("source_lang", default_source_code()),
+        width=300,
         disabled=True,
+        enable_filter=True,
+        filter_on_change=True,
         **dropdown_style,
     )
     target_dd = ft.Dropdown(
         label=L("target"),
-        options=[ft.dropdown.Option(key=s, text=label) for s, label in lang_options],
-        value=config.get("target_lang", "en"),
-        width=220,
+        options=lang_options,
+        value=config.get("target_lang", default_target_code()),
+        width=300,
         disabled=True,
+        enable_filter=True,
+        filter_on_change=True,
         **dropdown_style,
     )
 
@@ -471,13 +496,18 @@ def main(page: ft.Page) -> None:
         set_status(L("progress", done=str(done), total=str(total)), "progress")
 
     def translate_worker() -> None:
-        src = source_dd.value or "ja"
-        tgt = target_dd.value or "en"
+        src = source_dd.value or default_source_code()
+        tgt = target_dd.value or default_target_code()
+        if src.startswith("__header__") or tgt.startswith("__header__"):
+            schedule_ui(set_status, L("pick_lang"), "warn")
+            return
         config["source_lang"] = src
         config["target_lang"] = tgt
         save_config(config)
 
         try:
+            src_lang = language_by_code(src)
+            tgt_lang = language_by_code(tgt)
             engine = translator_holder["instance"]
             if engine is None:
                 schedule_ui(set_status, L("wait_model"), "warn")
@@ -494,8 +524,8 @@ def main(page: ft.Page) -> None:
             chunks = chunk_text(clip_text)
             translated_chunks = engine.translate_chunks(
                 chunks,
-                src,
-                tgt,
+                src_lang.suffix,
+                tgt_lang.suffix,
                 on_progress=progress_cb,
                 cancel_event=stop_event,
             )

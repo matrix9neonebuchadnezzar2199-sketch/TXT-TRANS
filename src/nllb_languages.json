@@ -1,0 +1,1632 @@
+{
+  "version": 1,
+  "count": 202,
+  "favorite_codes": [
+    "jpn_Jpan",
+    "eng_Latn",
+    "zho_Hans",
+    "zho_Hant",
+    "kor_Hang",
+    "rus_Cyrl"
+  ],
+  "default_source": "eng_Latn",
+  "default_target": "jpn_Jpan",
+  "languages": [
+    {
+      "nllb_code": "ace_Arab",
+      "name_en": "Acehnese (Arabic script)",
+      "name_ja": "Acehnese (Arabic script)",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ace_Latn",
+      "name_en": "Acehnese (Latin script)",
+      "name_ja": "Acehnese (Latin script)",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "acm_Arab",
+      "name_en": "Mesopotamian Arabic",
+      "name_ja": "Mesopotamian Arabic",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "acq_Arab",
+      "name_en": "Ta'izzi-Adeni Arabic",
+      "name_ja": "Ta'izzi-Adeni Arabic",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "aeb_Arab",
+      "name_en": "Tunisian Arabic",
+      "name_ja": "Tunisian Arabic",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "afr_Latn",
+      "name_en": "Afrikaans",
+      "name_ja": "Afrikaans",
+      "flag": "🇿🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ajp_Arab",
+      "name_en": "South Levantine Arabic",
+      "name_ja": "South Levantine Arabic",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "aka_Latn",
+      "name_en": "Akan",
+      "name_ja": "Akan",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "amh_Ethi",
+      "name_en": "Amharic",
+      "name_ja": "Amharic",
+      "flag": "🇪🇹",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "apc_Arab",
+      "name_en": "North Levantine Arabic",
+      "name_ja": "North Levantine Arabic",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "arb_Arab",
+      "name_en": "Modern Standard Arabic",
+      "name_ja": "アラビア語（標準）",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ars_Arab",
+      "name_en": "Najdi Arabic",
+      "name_ja": "Najdi Arabic",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ary_Arab",
+      "name_en": "Moroccan Arabic",
+      "name_ja": "Moroccan Arabic",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "arz_Arab",
+      "name_en": "Egyptian Arabic",
+      "name_ja": "Egyptian Arabic",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "asm_Beng",
+      "name_en": "Assamese",
+      "name_ja": "Assamese",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ast_Latn",
+      "name_en": "Asturian",
+      "name_ja": "Asturian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "awa_Deva",
+      "name_en": "Awadhi",
+      "name_ja": "Awadhi",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ayr_Latn",
+      "name_en": "Central Aymara",
+      "name_ja": "Central Aymara",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "azb_Arab",
+      "name_en": "South Azerbaijani",
+      "name_ja": "South Azerbaijani",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "azj_Latn",
+      "name_en": "North Azerbaijani",
+      "name_ja": "North Azerbaijani",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bak_Cyrl",
+      "name_en": "Bashkir",
+      "name_ja": "Bashkir",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bam_Latn",
+      "name_en": "Bambara",
+      "name_ja": "Bambara",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ban_Latn",
+      "name_en": "Balinese",
+      "name_ja": "Balinese",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bel_Cyrl",
+      "name_en": "Belarusian",
+      "name_ja": "Belarusian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bem_Latn",
+      "name_en": "Bemba",
+      "name_ja": "Bemba",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ben_Beng",
+      "name_en": "Bengali",
+      "name_ja": "Bengali",
+      "flag": "🇧🇩",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bho_Deva",
+      "name_en": "Bhojpuri",
+      "name_ja": "Bhojpuri",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bjn_Arab",
+      "name_en": "Banjar (Arabic script)",
+      "name_ja": "Banjar (Arabic script)",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bjn_Latn",
+      "name_en": "Banjar (Latin script)",
+      "name_ja": "Banjar (Latin script)",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bod_Tibt",
+      "name_en": "Standard Tibetan",
+      "name_ja": "Standard Tibetan",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bos_Latn",
+      "name_en": "Bosnian",
+      "name_ja": "Bosnian",
+      "flag": "🇧🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bug_Latn",
+      "name_en": "Buginese",
+      "name_ja": "Buginese",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "bul_Cyrl",
+      "name_en": "Bulgarian",
+      "name_ja": "Bulgarian",
+      "flag": "🇧🇬",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "cat_Latn",
+      "name_en": "Catalan",
+      "name_ja": "Catalan",
+      "flag": "🇪🇸",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ceb_Latn",
+      "name_en": "Cebuano",
+      "name_ja": "Cebuano",
+      "flag": "🇵🇭",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ces_Latn",
+      "name_en": "Czech",
+      "name_ja": "Czech",
+      "flag": "🇨🇿",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "cjk_Latn",
+      "name_en": "Chokwe",
+      "name_ja": "Chokwe",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ckb_Arab",
+      "name_en": "Central Kurdish",
+      "name_ja": "Central Kurdish",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "crh_Latn",
+      "name_en": "Crimean Tatar",
+      "name_ja": "Crimean Tatar",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "cym_Latn",
+      "name_en": "Welsh",
+      "name_ja": "Welsh",
+      "flag": "🇬🇧",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "dan_Latn",
+      "name_en": "Danish",
+      "name_ja": "Danish",
+      "flag": "🇩🇰",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "deu_Latn",
+      "name_en": "German",
+      "name_ja": "ドイツ語",
+      "flag": "🇩🇪",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "dik_Latn",
+      "name_en": "Southwestern Dinka",
+      "name_ja": "Southwestern Dinka",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "dyu_Latn",
+      "name_en": "Dyula",
+      "name_ja": "Dyula",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "dzo_Tibt",
+      "name_en": "Dzongkha",
+      "name_ja": "Dzongkha",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ell_Grek",
+      "name_en": "Greek",
+      "name_ja": "Greek",
+      "flag": "🇬🇷",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "eng_Latn",
+      "name_en": "English",
+      "name_ja": "英語",
+      "flag": "🇬🇧",
+      "favorite": true,
+      "legacy_suffix": "en"
+    },
+    {
+      "nllb_code": "epo_Latn",
+      "name_en": "Esperanto",
+      "name_ja": "Esperanto",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "est_Latn",
+      "name_en": "Estonian",
+      "name_ja": "Estonian",
+      "flag": "🇪🇪",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "eus_Latn",
+      "name_en": "Basque",
+      "name_ja": "Basque",
+      "flag": "🇪🇸",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ewe_Latn",
+      "name_en": "Ewe",
+      "name_ja": "Ewe",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "fao_Latn",
+      "name_en": "Faroese",
+      "name_ja": "Faroese",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "pes_Arab",
+      "name_en": "Western Persian",
+      "name_ja": "Western Persian",
+      "flag": "🇮🇷",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "fij_Latn",
+      "name_en": "Fijian",
+      "name_ja": "Fijian",
+      "flag": "🇫🇯",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "fin_Latn",
+      "name_en": "Finnish",
+      "name_ja": "Finnish",
+      "flag": "🇫🇮",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "fon_Latn",
+      "name_en": "Fon",
+      "name_ja": "Fon",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "fra_Latn",
+      "name_en": "French",
+      "name_ja": "フランス語",
+      "flag": "🇫🇷",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "fur_Latn",
+      "name_en": "Friulian",
+      "name_ja": "Friulian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "fuv_Latn",
+      "name_en": "Nigerian Fulfulde",
+      "name_ja": "Nigerian Fulfulde",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "gla_Latn",
+      "name_en": "Scottish Gaelic",
+      "name_ja": "Scottish Gaelic",
+      "flag": "🇬🇧",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "gle_Latn",
+      "name_en": "Irish",
+      "name_ja": "Irish",
+      "flag": "🇮🇪",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "glg_Latn",
+      "name_en": "Galician",
+      "name_ja": "Galician",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "grn_Latn",
+      "name_en": "Guarani",
+      "name_ja": "Guarani",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "guj_Gujr",
+      "name_en": "Gujarati",
+      "name_ja": "Gujarati",
+      "flag": "🇮🇳",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "hat_Latn",
+      "name_en": "Haitian Creole",
+      "name_ja": "Haitian Creole",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "hau_Latn",
+      "name_en": "Hausa",
+      "name_ja": "Hausa",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "heb_Hebr",
+      "name_en": "Hebrew",
+      "name_ja": "Hebrew",
+      "flag": "🇮🇱",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "hin_Deva",
+      "name_en": "Hindi",
+      "name_ja": "ヒンディー語",
+      "flag": "🇮🇳",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "hne_Deva",
+      "name_en": "Chhattisgarhi",
+      "name_ja": "Chhattisgarhi",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "hrv_Latn",
+      "name_en": "Croatian",
+      "name_ja": "Croatian",
+      "flag": "🇭🇷",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "hun_Latn",
+      "name_en": "Hungarian",
+      "name_ja": "Hungarian",
+      "flag": "🇭🇺",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "hye_Armn",
+      "name_en": "Armenian",
+      "name_ja": "Armenian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ibo_Latn",
+      "name_en": "Igbo",
+      "name_ja": "Igbo",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ilo_Latn",
+      "name_en": "Ilocano",
+      "name_ja": "Ilocano",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ind_Latn",
+      "name_en": "Indonesian",
+      "name_ja": "インドネシア語",
+      "flag": "🇮🇩",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "isl_Latn",
+      "name_en": "Icelandic",
+      "name_ja": "Icelandic",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ita_Latn",
+      "name_en": "Italian",
+      "name_ja": "イタリア語",
+      "flag": "🇮🇹",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "jav_Latn",
+      "name_en": "Javanese",
+      "name_ja": "Javanese",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "jpn_Jpan",
+      "name_en": "Japanese",
+      "name_ja": "日本語",
+      "flag": "🇯🇵",
+      "favorite": true,
+      "legacy_suffix": "ja"
+    },
+    {
+      "nllb_code": "kab_Latn",
+      "name_en": "Kabyle",
+      "name_ja": "Kabyle",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kac_Latn",
+      "name_en": "Jingpho",
+      "name_ja": "Jingpho",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kam_Latn",
+      "name_en": "Kamba",
+      "name_ja": "Kamba",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kan_Knda",
+      "name_en": "Kannada",
+      "name_ja": "Kannada",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kas_Arab",
+      "name_en": "Kashmiri (Arabic script)",
+      "name_ja": "Kashmiri (Arabic script)",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kas_Deva",
+      "name_en": "Kashmiri (Devanagari script)",
+      "name_ja": "Kashmiri (Devanagari script)",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kat_Geor",
+      "name_en": "Georgian",
+      "name_ja": "Georgian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "knc_Arab",
+      "name_en": "Central Kanuri (Arabic script)",
+      "name_ja": "Central Kanuri (Arabic script)",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "knc_Latn",
+      "name_en": "Central Kanuri (Latin script)",
+      "name_ja": "Central Kanuri (Latin script)",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kaz_Cyrl",
+      "name_en": "Kazakh",
+      "name_ja": "Kazakh",
+      "flag": "🇰🇿",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kbp_Latn",
+      "name_en": "Kabiyè",
+      "name_ja": "Kabiyè",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kea_Latn",
+      "name_en": "Kabuverdianu",
+      "name_ja": "Kabuverdianu",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "khm_Khmr",
+      "name_en": "Khmer",
+      "name_ja": "Khmer",
+      "flag": "🇰🇭",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kik_Latn",
+      "name_en": "Kikuyu",
+      "name_ja": "Kikuyu",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kin_Latn",
+      "name_en": "Kinyarwanda",
+      "name_ja": "Kinyarwanda",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kir_Cyrl",
+      "name_en": "Kyrgyz",
+      "name_ja": "Kyrgyz",
+      "flag": "🇰🇬",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kmb_Latn",
+      "name_en": "Kimbundu",
+      "name_ja": "Kimbundu",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kon_Latn",
+      "name_en": "Kikongo",
+      "name_ja": "Kikongo",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "kor_Hang",
+      "name_en": "Korean",
+      "name_ja": "韓国語",
+      "flag": "🇰🇷",
+      "favorite": true,
+      "legacy_suffix": "ko"
+    },
+    {
+      "nllb_code": "kmr_Latn",
+      "name_en": "Northern Kurdish",
+      "name_ja": "Northern Kurdish",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lao_Laoo",
+      "name_en": "Lao",
+      "name_ja": "Lao",
+      "flag": "🇱🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lvs_Latn",
+      "name_en": "Standard Latvian",
+      "name_ja": "Standard Latvian",
+      "flag": "🇱🇻",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lij_Latn",
+      "name_en": "Ligurian",
+      "name_ja": "Ligurian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lim_Latn",
+      "name_en": "Limburgish",
+      "name_ja": "Limburgish",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lin_Latn",
+      "name_en": "Lingala",
+      "name_ja": "Lingala",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lit_Latn",
+      "name_en": "Lithuanian",
+      "name_ja": "Lithuanian",
+      "flag": "🇱🇹",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lmo_Latn",
+      "name_en": "Lombard",
+      "name_ja": "Lombard",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ltg_Latn",
+      "name_en": "Latgalian",
+      "name_ja": "Latgalian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ltz_Latn",
+      "name_en": "Luxembourgish",
+      "name_ja": "Luxembourgish",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lua_Latn",
+      "name_en": "Luba-Kasai",
+      "name_ja": "Luba-Kasai",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lug_Latn",
+      "name_en": "Ganda",
+      "name_ja": "Ganda",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "luo_Latn",
+      "name_en": "Luo",
+      "name_ja": "Luo",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "lus_Latn",
+      "name_en": "Mizo",
+      "name_ja": "Mizo",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mag_Deva",
+      "name_en": "Magahi",
+      "name_ja": "Magahi",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mai_Deva",
+      "name_en": "Maithili",
+      "name_ja": "Maithili",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mal_Mlym",
+      "name_en": "Malayalam",
+      "name_ja": "Malayalam",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mar_Deva",
+      "name_en": "Marathi",
+      "name_ja": "Marathi",
+      "flag": "🇮🇳",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "min_Latn",
+      "name_en": "Minangkabau (Latin script)",
+      "name_ja": "Minangkabau (Latin script)",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mkd_Cyrl",
+      "name_en": "Macedonian",
+      "name_ja": "Macedonian",
+      "flag": "🇲🇰",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "plt_Latn",
+      "name_en": "Plateau Malagasy",
+      "name_ja": "Plateau Malagasy",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mlt_Latn",
+      "name_en": "Maltese",
+      "name_ja": "Maltese",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mni_Beng",
+      "name_en": "Meitei (Bengali script)",
+      "name_ja": "Meitei (Bengali script)",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "khk_Cyrl",
+      "name_en": "Halh Mongolian",
+      "name_ja": "Halh Mongolian",
+      "flag": "🇲🇳",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mos_Latn",
+      "name_en": "Mossi",
+      "name_ja": "Mossi",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mri_Latn",
+      "name_en": "Maori",
+      "name_ja": "Maori",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "zsm_Latn",
+      "name_en": "Standard Malay",
+      "name_ja": "Standard Malay",
+      "flag": "🇲🇾",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "mya_Mymr",
+      "name_en": "Burmese",
+      "name_ja": "Burmese",
+      "flag": "🇲🇲",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "nld_Latn",
+      "name_en": "Dutch",
+      "name_ja": "オランダ語",
+      "flag": "🇳🇱",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "nno_Latn",
+      "name_en": "Norwegian Nynorsk",
+      "name_ja": "Norwegian Nynorsk",
+      "flag": "🇳🇴",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "nob_Latn",
+      "name_en": "Norwegian Bokmål",
+      "name_ja": "Norwegian Bokmål",
+      "flag": "🇳🇴",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "npi_Deva",
+      "name_en": "Nepali",
+      "name_ja": "Nepali",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "nso_Latn",
+      "name_en": "Northern Sotho",
+      "name_ja": "Northern Sotho",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "nus_Latn",
+      "name_en": "Nuer",
+      "name_ja": "Nuer",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "nya_Latn",
+      "name_en": "Nyanja",
+      "name_ja": "Nyanja",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "oci_Latn",
+      "name_en": "Occitan",
+      "name_ja": "Occitan",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "gaz_Latn",
+      "name_en": "West Central Oromo",
+      "name_ja": "West Central Oromo",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ory_Orya",
+      "name_en": "Odia",
+      "name_ja": "Odia",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "pag_Latn",
+      "name_en": "Pangasinan",
+      "name_ja": "Pangasinan",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "pan_Guru",
+      "name_en": "Eastern Panjabi",
+      "name_ja": "Eastern Panjabi",
+      "flag": "🇮🇳",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "pap_Latn",
+      "name_en": "Papiamento",
+      "name_ja": "Papiamento",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "pol_Latn",
+      "name_en": "Polish",
+      "name_ja": "ポーランド語",
+      "flag": "🇵🇱",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "por_Latn",
+      "name_en": "Portuguese",
+      "name_ja": "ポルトガル語",
+      "flag": "🇵🇹",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "prs_Arab",
+      "name_en": "Dari",
+      "name_ja": "Dari",
+      "flag": "🇦🇫",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "pbt_Arab",
+      "name_en": "Southern Pashto",
+      "name_ja": "Southern Pashto",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "quy_Latn",
+      "name_en": "Ayacucho Quechua",
+      "name_ja": "Ayacucho Quechua",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ron_Latn",
+      "name_en": "Romanian",
+      "name_ja": "Romanian",
+      "flag": "🇷🇴",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "run_Latn",
+      "name_en": "Rundi",
+      "name_ja": "Rundi",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "rus_Cyrl",
+      "name_en": "Russian",
+      "name_ja": "ロシア語",
+      "flag": "🇷🇺",
+      "favorite": true,
+      "legacy_suffix": "ru"
+    },
+    {
+      "nllb_code": "sag_Latn",
+      "name_en": "Sango",
+      "name_ja": "Sango",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "san_Deva",
+      "name_en": "Sanskrit",
+      "name_ja": "Sanskrit",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "sat_Beng",
+      "name_en": "Santali",
+      "name_ja": "Santali",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "scn_Latn",
+      "name_en": "Sicilian",
+      "name_ja": "Sicilian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "shn_Mymr",
+      "name_en": "Shan",
+      "name_ja": "Shan",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "sin_Sinh",
+      "name_en": "Sinhala",
+      "name_ja": "Sinhala",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "slk_Latn",
+      "name_en": "Slovak",
+      "name_ja": "Slovak",
+      "flag": "🇸🇰",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "slv_Latn",
+      "name_en": "Slovenian",
+      "name_ja": "Slovenian",
+      "flag": "🇸🇮",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "smo_Latn",
+      "name_en": "Samoan",
+      "name_ja": "Samoan",
+      "flag": "🇼🇸",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "sna_Latn",
+      "name_en": "Shona",
+      "name_ja": "Shona",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "snd_Arab",
+      "name_en": "Sindhi",
+      "name_ja": "Sindhi",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "som_Latn",
+      "name_en": "Somali",
+      "name_ja": "Somali",
+      "flag": "🇸🇴",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "sot_Latn",
+      "name_en": "Southern Sotho",
+      "name_ja": "Southern Sotho",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "spa_Latn",
+      "name_en": "Spanish",
+      "name_ja": "スペイン語",
+      "flag": "🇪🇸",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "als_Latn",
+      "name_en": "Tosk Albanian",
+      "name_ja": "Tosk Albanian",
+      "flag": "🇦🇱",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "srd_Latn",
+      "name_en": "Sardinian",
+      "name_ja": "Sardinian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "srp_Cyrl",
+      "name_en": "Serbian",
+      "name_ja": "Serbian",
+      "flag": "🇷🇸",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ssw_Latn",
+      "name_en": "Swati",
+      "name_ja": "Swati",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "sun_Latn",
+      "name_en": "Sundanese",
+      "name_ja": "Sundanese",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "swe_Latn",
+      "name_en": "Swedish",
+      "name_ja": "Swedish",
+      "flag": "🇸🇪",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "swh_Latn",
+      "name_en": "Swahili",
+      "name_ja": "Swahili",
+      "flag": "🇰🇪",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "szl_Latn",
+      "name_en": "Silesian",
+      "name_ja": "Silesian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tam_Taml",
+      "name_en": "Tamil",
+      "name_ja": "Tamil",
+      "flag": "🇮🇳",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tat_Cyrl",
+      "name_en": "Tatar",
+      "name_ja": "Tatar",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tel_Telu",
+      "name_en": "Telugu",
+      "name_ja": "Telugu",
+      "flag": "🇮🇳",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tgk_Cyrl",
+      "name_en": "Tajik",
+      "name_ja": "Tajik",
+      "flag": "🇹🇯",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tgl_Latn",
+      "name_en": "Tagalog",
+      "name_ja": "Tagalog",
+      "flag": "🇵🇭",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tha_Thai",
+      "name_en": "Thai",
+      "name_ja": "タイ語",
+      "flag": "🇹🇭",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tir_Ethi",
+      "name_en": "Tigrinya",
+      "name_ja": "Tigrinya",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "taq_Latn",
+      "name_en": "Tamasheq (Latin script)",
+      "name_ja": "Tamasheq (Latin script)",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "taq_Tfng",
+      "name_en": "Tamasheq (Tifinagh script)",
+      "name_ja": "Tamasheq (Tifinagh script)",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tpi_Latn",
+      "name_en": "Tok Pisin",
+      "name_ja": "Tok Pisin",
+      "flag": "🇵🇬",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tsn_Latn",
+      "name_en": "Tswana",
+      "name_ja": "Tswana",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tso_Latn",
+      "name_en": "Tsonga",
+      "name_ja": "Tsonga",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tuk_Latn",
+      "name_en": "Turkmen",
+      "name_ja": "Turkmen",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tum_Latn",
+      "name_en": "Tumbuka",
+      "name_ja": "Tumbuka",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tur_Latn",
+      "name_en": "Turkish",
+      "name_ja": "トルコ語",
+      "flag": "🇹🇷",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "twi_Latn",
+      "name_en": "Twi",
+      "name_ja": "Twi",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "tzm_Tfng",
+      "name_en": "Central Atlas Tamazight",
+      "name_ja": "Central Atlas Tamazight",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "uig_Arab",
+      "name_en": "Uyghur",
+      "name_ja": "Uyghur",
+      "flag": "🇸🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ukr_Cyrl",
+      "name_en": "Ukrainian",
+      "name_ja": "ウクライナ語",
+      "flag": "🇺🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "umb_Latn",
+      "name_en": "Umbundu",
+      "name_ja": "Umbundu",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "urd_Arab",
+      "name_en": "Urdu",
+      "name_ja": "Urdu",
+      "flag": "🇵🇰",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "uzn_Latn",
+      "name_en": "Northern Uzbek",
+      "name_ja": "Northern Uzbek",
+      "flag": "🇺🇿",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "vec_Latn",
+      "name_en": "Venetian",
+      "name_ja": "Venetian",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "vie_Latn",
+      "name_en": "Vietnamese",
+      "name_ja": "ベトナム語",
+      "flag": "🇻🇳",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "war_Latn",
+      "name_en": "Waray",
+      "name_ja": "Waray",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "wol_Latn",
+      "name_en": "Wolof",
+      "name_ja": "Wolof",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "xho_Latn",
+      "name_en": "Xhosa",
+      "name_ja": "Xhosa",
+      "flag": "🇿🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "ydd_Hebr",
+      "name_en": "Eastern Yiddish",
+      "name_ja": "Eastern Yiddish",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "yor_Latn",
+      "name_en": "Yoruba",
+      "name_ja": "Yoruba",
+      "flag": "🌐",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "yue_Hant",
+      "name_en": "Yue Chinese",
+      "name_ja": "Yue Chinese",
+      "flag": "🇭🇰",
+      "favorite": false,
+      "legacy_suffix": null
+    },
+    {
+      "nllb_code": "zho_Hans",
+      "name_en": "Chinese (Simplified)",
+      "name_ja": "中国語（簡体）",
+      "flag": "🇨🇳",
+      "favorite": true,
+      "legacy_suffix": "zh-hans"
+    },
+    {
+      "nllb_code": "zho_Hant",
+      "name_en": "Chinese (Traditional)",
+      "name_ja": "中国語（繁体）",
+      "flag": "🇹🇼",
+      "favorite": true,
+      "legacy_suffix": "zh-hant"
+    },
+    {
+      "nllb_code": "zul_Latn",
+      "name_en": "Zulu",
+      "name_ja": "Zulu",
+      "flag": "🇿🇦",
+      "favorite": false,
+      "legacy_suffix": null
+    }
+  ]
+}

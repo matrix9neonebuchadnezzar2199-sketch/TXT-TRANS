@@ -12,7 +12,7 @@ from transformers import AutoTokenizer
 from transformers.utils import logging as hf_logging
 
 from chunker import chunk_text, join_chunks
-from languages import language_by_suffix
+from languages import resolve_language
 
 logger = logging.getLogger(__name__)
 
@@ -144,8 +144,8 @@ class NllbTranslator:
         assert self._translator is not None
         assert self._tokenizer is not None
 
-        src_lang = language_by_suffix(src_suffix)
-        tgt_lang = language_by_suffix(tgt_suffix)
+        src_lang = resolve_language(src_suffix)
+        tgt_lang = resolve_language(tgt_suffix)
         tokenizer = self._tokenizer
         translator = self._translator
 

@@ -12,7 +12,7 @@ Offline desktop translator for `.txt` files. Engine: **NLLB-200-distilled-600M**
 | CLI | `src/translate.py` | Batch / automation |
 | Chunker | `src/chunker.py` | Paragraph and sentence splitting (~400 chars) |
 | Translator | `src/translator.py` | CTranslate2 + Hugging Face tokenizer (`load`/`unload`, cancellable) |
-| Languages | `src/languages.py` | UI labels and NLLB FLORES codes |
+| Languages | `src/languages.py` + `src/nllb_languages.json` | 202 NLLB codes, favorites, flags |
 | Paths | `src/path_helpers.py` | `report.txt` → `report.en.txt` |
 
 ## Data flow
