@@ -22,6 +22,19 @@ if (Get-Command uv -ErrorAction SilentlyContinue) {
     & $VenvPython -m pip install -q pyinstaller flet-desktop==0.27.6
 }
 
+Write-Host "==> App icon (image -> gui/assets/icon.ico)"
+$iconSource = Join-Path $RepoRoot "image\8P6yIyDS.jpg"
+if (Test-Path $iconSource) {
+    if (Get-Command uv -ErrorAction SilentlyContinue) {
+        uv pip install pillow | Out-Null
+    } else {
+        & $VenvPython -m pip install -q pillow
+    }
+    & $VenvPython (Join-Path $RepoRoot "scripts\convert_app_icon.py")
+} else {
+    Write-Warning "Icon source missing: $iconSource (using existing gui\assets\icon.ico if any)"
+}
+
 Write-Host "==> Stage Flet desktop client"
 & $VenvPython (Join-Path $RepoRoot "scripts\prepare_flet_client.py")
 

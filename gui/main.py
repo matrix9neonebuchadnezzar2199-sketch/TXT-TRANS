@@ -29,6 +29,19 @@ else:
     REPO_ROOT = GUI_ROOT.parent
     SRC_DIR = REPO_ROOT / "src"
 
+
+def app_icon_path() -> str | None:
+    """Return bundled ``icon.ico`` for the window and taskbar, if present."""
+    candidates = (
+        [GUI_ROOT / "assets" / "icon.ico", _BUNDLE_ROOT / "assets" / "icon.ico"]
+        if IS_FROZEN
+        else [GUI_ROOT / "assets" / "icon.ico"]
+    )
+    for path in candidates:
+        if path.is_file():
+            return str(path)
+    return None
+
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
@@ -227,6 +240,9 @@ def main(page: ft.Page) -> None:
     page.title = L("title")
     page.window.width = 900
     page.window.height = 720
+    window_icon = app_icon_path()
+    if window_icon is not None:
+        page.window.icon = window_icon
     page.padding = 16
     page.bgcolor = UI["page_bg"]
     page.theme = ft.Theme(
