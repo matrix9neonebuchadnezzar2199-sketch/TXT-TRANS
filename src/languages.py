@@ -3,11 +3,40 @@
 from __future__ import annotations
 
 import json
+import sys
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 
-_DATA_PATH = Path(__file__).resolve().parent / "nllb_languages.json"
+_CATALOG_FILENAME = "nllb_languages.json"
+
+
+def _catalog_path() -> Path:
+    """Resolve the language catalog for dev and PyInstaller one-folder builds.
+
+    PyInstaller places data files under ``_MEIPASS/src/`` while the compiled
+    ``languages`` module may live directly under ``_MEIPASS/``.
+    """
+    module_dir = Path(__file__).resolve().parent
+    candidates: list[Path] = [module_dir / _CATALOG_FILENAME]
+
+    if getattr(sys, "frozen", False):
+        bundle_root = Path(getattr(sys, "_MEIPASS", module_dir))
+        candidates.extend(
+            [
+                bundle_root / _CATALOG_FILENAME,
+                bundle_root / "src" / _CATALOG_FILENAME,
+            ]
+        )
+    elif module_dir.name != "src":
+        candidates.append(module_dir / "src" / _CATALOG_FILENAME)
+
+    for path in candidates:
+        if path.is_file():
+            return path
+
+    searched = ", ".join(str(path) for path in candidates)
+    raise FileNotFoundError(f"Language catalog not found. Tried: {searched}")
 
 
 @dataclass(frozen=True)
@@ -45,7 +74,7 @@ class Language:
 @lru_cache(maxsize=1)
 def _catalog() -> dict[str, object]:
     """Load bundled language catalog once."""
-    raw = json.loads(_DATA_PATH.read_text(encoding="utf-8"))
+    raw = json.loads(_catalog_path().read_text(encoding="utf-8"))
     languages: list[Language] = []
     by_code: dict[str, Language] = {}
     by_suffix: dict[str, Language] = {}
